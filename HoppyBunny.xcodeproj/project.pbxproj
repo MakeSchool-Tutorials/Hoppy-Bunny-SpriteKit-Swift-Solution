@@ -1,0 +1,516 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5BAFD05F1C69328A0088A764 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAFD05E1C69328A0088A764 /* AppDelegate.swift */; };
+		5BAFD0611C69328A0088A764 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5BAFD0601C69328A0088A764 /* GameScene.sks */; };
+		5BAFD0631C69328A0088A764 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAFD0621C69328A0088A764 /* GameScene.swift */; };
+		5BAFD0651C69328A0088A764 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAFD0641C69328A0088A764 /* GameViewController.swift */; };
+		5BAFD0681C69328A0088A764 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BAFD0661C69328A0088A764 /* Main.storyboard */; };
+		5BAFD06A1C69328A0088A764 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BAFD0691C69328A0088A764 /* Assets.xcassets */; };
+		5BAFD06D1C69328A0088A764 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BAFD06B1C69328A0088A764 /* LaunchScreen.storyboard */; };
+		5BAFD0781C69328A0088A764 /* HoppyBunnyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAFD0771C69328A0088A764 /* HoppyBunnyTests.swift */; };
+		5BAFD0831C69328A0088A764 /* HoppyBunnyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAFD0821C69328A0088A764 /* HoppyBunnyUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5BAFD0741C69328A0088A764 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5BAFD0531C69328A0088A764 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5BAFD05A1C69328A0088A764;
+			remoteInfo = HoppyBunny;
+		};
+		5BAFD07F1C69328A0088A764 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5BAFD0531C69328A0088A764 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5BAFD05A1C69328A0088A764;
+			remoteInfo = HoppyBunny;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5BAFD05B1C69328A0088A764 /* HoppyBunny.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoppyBunny.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BAFD05E1C69328A0088A764 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5BAFD0601C69328A0088A764 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		5BAFD0621C69328A0088A764 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		5BAFD0641C69328A0088A764 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		5BAFD0671C69328A0088A764 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5BAFD0691C69328A0088A764 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5BAFD06C1C69328A0088A764 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5BAFD06E1C69328A0088A764 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BAFD0731C69328A0088A764 /* HoppyBunnyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HoppyBunnyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BAFD0771C69328A0088A764 /* HoppyBunnyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoppyBunnyTests.swift; sourceTree = "<group>"; };
+		5BAFD0791C69328A0088A764 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BAFD07E1C69328A0088A764 /* HoppyBunnyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HoppyBunnyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BAFD0821C69328A0088A764 /* HoppyBunnyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoppyBunnyUITests.swift; sourceTree = "<group>"; };
+		5BAFD0841C69328A0088A764 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5BAFD0581C69328A0088A764 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BAFD0701C69328A0088A764 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BAFD07B1C69328A0088A764 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5BAFD0521C69328A0088A764 = {
+			isa = PBXGroup;
+			children = (
+				5BAFD05D1C69328A0088A764 /* HoppyBunny */,
+				5BAFD0761C69328A0088A764 /* HoppyBunnyTests */,
+				5BAFD0811C69328A0088A764 /* HoppyBunnyUITests */,
+				5BAFD05C1C69328A0088A764 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5BAFD05C1C69328A0088A764 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5BAFD05B1C69328A0088A764 /* HoppyBunny.app */,
+				5BAFD0731C69328A0088A764 /* HoppyBunnyTests.xctest */,
+				5BAFD07E1C69328A0088A764 /* HoppyBunnyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5BAFD05D1C69328A0088A764 /* HoppyBunny */ = {
+			isa = PBXGroup;
+			children = (
+				5BAFD05E1C69328A0088A764 /* AppDelegate.swift */,
+				5BAFD0601C69328A0088A764 /* GameScene.sks */,
+				5BAFD0621C69328A0088A764 /* GameScene.swift */,
+				5BAFD0641C69328A0088A764 /* GameViewController.swift */,
+				5BAFD0661C69328A0088A764 /* Main.storyboard */,
+				5BAFD0691C69328A0088A764 /* Assets.xcassets */,
+				5BAFD06B1C69328A0088A764 /* LaunchScreen.storyboard */,
+				5BAFD06E1C69328A0088A764 /* Info.plist */,
+			);
+			path = HoppyBunny;
+			sourceTree = "<group>";
+		};
+		5BAFD0761C69328A0088A764 /* HoppyBunnyTests */ = {
+			isa = PBXGroup;
+			children = (
+				5BAFD0771C69328A0088A764 /* HoppyBunnyTests.swift */,
+				5BAFD0791C69328A0088A764 /* Info.plist */,
+			);
+			path = HoppyBunnyTests;
+			sourceTree = "<group>";
+		};
+		5BAFD0811C69328A0088A764 /* HoppyBunnyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5BAFD0821C69328A0088A764 /* HoppyBunnyUITests.swift */,
+				5BAFD0841C69328A0088A764 /* Info.plist */,
+			);
+			path = HoppyBunnyUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5BAFD05A1C69328A0088A764 /* HoppyBunny */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BAFD0871C69328A0088A764 /* Build configuration list for PBXNativeTarget "HoppyBunny" */;
+			buildPhases = (
+				5BAFD0571C69328A0088A764 /* Sources */,
+				5BAFD0581C69328A0088A764 /* Frameworks */,
+				5BAFD0591C69328A0088A764 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HoppyBunny;
+			productName = HoppyBunny;
+			productReference = 5BAFD05B1C69328A0088A764 /* HoppyBunny.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5BAFD0721C69328A0088A764 /* HoppyBunnyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BAFD08A1C69328A0088A764 /* Build configuration list for PBXNativeTarget "HoppyBunnyTests" */;
+			buildPhases = (
+				5BAFD06F1C69328A0088A764 /* Sources */,
+				5BAFD0701C69328A0088A764 /* Frameworks */,
+				5BAFD0711C69328A0088A764 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5BAFD0751C69328A0088A764 /* PBXTargetDependency */,
+			);
+			name = HoppyBunnyTests;
+			productName = HoppyBunnyTests;
+			productReference = 5BAFD0731C69328A0088A764 /* HoppyBunnyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5BAFD07D1C69328A0088A764 /* HoppyBunnyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BAFD08D1C69328A0088A764 /* Build configuration list for PBXNativeTarget "HoppyBunnyUITests" */;
+			buildPhases = (
+				5BAFD07A1C69328A0088A764 /* Sources */,
+				5BAFD07B1C69328A0088A764 /* Frameworks */,
+				5BAFD07C1C69328A0088A764 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5BAFD0801C69328A0088A764 /* PBXTargetDependency */,
+			);
+			name = HoppyBunnyUITests;
+			productName = HoppyBunnyUITests;
+			productReference = 5BAFD07E1C69328A0088A764 /* HoppyBunnyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5BAFD0531C69328A0088A764 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				TargetAttributes = {
+					5BAFD05A1C69328A0088A764 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					5BAFD0721C69328A0088A764 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 5BAFD05A1C69328A0088A764;
+					};
+					5BAFD07D1C69328A0088A764 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 5BAFD05A1C69328A0088A764;
+					};
+				};
+			};
+			buildConfigurationList = 5BAFD0561C69328A0088A764 /* Build configuration list for PBXProject "HoppyBunny" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5BAFD0521C69328A0088A764;
+			productRefGroup = 5BAFD05C1C69328A0088A764 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5BAFD05A1C69328A0088A764 /* HoppyBunny */,
+				5BAFD0721C69328A0088A764 /* HoppyBunnyTests */,
+				5BAFD07D1C69328A0088A764 /* HoppyBunnyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5BAFD0591C69328A0088A764 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BAFD0611C69328A0088A764 /* GameScene.sks in Resources */,
+				5BAFD06D1C69328A0088A764 /* LaunchScreen.storyboard in Resources */,
+				5BAFD06A1C69328A0088A764 /* Assets.xcassets in Resources */,
+				5BAFD0681C69328A0088A764 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BAFD0711C69328A0088A764 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BAFD07C1C69328A0088A764 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5BAFD0571C69328A0088A764 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BAFD0631C69328A0088A764 /* GameScene.swift in Sources */,
+				5BAFD0651C69328A0088A764 /* GameViewController.swift in Sources */,
+				5BAFD05F1C69328A0088A764 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BAFD06F1C69328A0088A764 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BAFD0781C69328A0088A764 /* HoppyBunnyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BAFD07A1C69328A0088A764 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BAFD0831C69328A0088A764 /* HoppyBunnyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5BAFD0751C69328A0088A764 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5BAFD05A1C69328A0088A764 /* HoppyBunny */;
+			targetProxy = 5BAFD0741C69328A0088A764 /* PBXContainerItemProxy */;
+		};
+		5BAFD0801C69328A0088A764 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5BAFD05A1C69328A0088A764 /* HoppyBunny */;
+			targetProxy = 5BAFD07F1C69328A0088A764 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5BAFD0661C69328A0088A764 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5BAFD0671C69328A0088A764 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5BAFD06B1C69328A0088A764 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5BAFD06C1C69328A0088A764 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5BAFD0851C69328A0088A764 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5BAFD0861C69328A0088A764 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5BAFD0881C69328A0088A764 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HoppyBunny/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool.HoppyBunny;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5BAFD0891C69328A0088A764 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HoppyBunny/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool.HoppyBunny;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		5BAFD08B1C69328A0088A764 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = HoppyBunnyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool.HoppyBunnyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HoppyBunny.app/HoppyBunny";
+			};
+			name = Debug;
+		};
+		5BAFD08C1C69328A0088A764 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HoppyBunnyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool.HoppyBunnyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HoppyBunny.app/HoppyBunny";
+			};
+			name = Release;
+		};
+		5BAFD08E1C69328A0088A764 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = HoppyBunnyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool.HoppyBunnyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = HoppyBunny;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		5BAFD08F1C69328A0088A764 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HoppyBunnyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool.HoppyBunnyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = HoppyBunny;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5BAFD0561C69328A0088A764 /* Build configuration list for PBXProject "HoppyBunny" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BAFD0851C69328A0088A764 /* Debug */,
+				5BAFD0861C69328A0088A764 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5BAFD0871C69328A0088A764 /* Build configuration list for PBXNativeTarget "HoppyBunny" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BAFD0881C69328A0088A764 /* Debug */,
+				5BAFD0891C69328A0088A764 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5BAFD08A1C69328A0088A764 /* Build configuration list for PBXNativeTarget "HoppyBunnyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BAFD08B1C69328A0088A764 /* Debug */,
+				5BAFD08C1C69328A0088A764 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5BAFD08D1C69328A0088A764 /* Build configuration list for PBXNativeTarget "HoppyBunnyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BAFD08E1C69328A0088A764 /* Debug */,
+				5BAFD08F1C69328A0088A764 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5BAFD0531C69328A0088A764 /* Project object */;
+}
