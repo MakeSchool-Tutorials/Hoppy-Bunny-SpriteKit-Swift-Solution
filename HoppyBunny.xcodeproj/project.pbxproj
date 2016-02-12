@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B1F919F1C6D386F000B541C /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1F919E1C6D386F000B541C /* CGFloat+Extensions.swift */; };
 		5BAFD05F1C69328A0088A764 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAFD05E1C69328A0088A764 /* AppDelegate.swift */; };
 		5BAFD0611C69328A0088A764 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5BAFD0601C69328A0088A764 /* GameScene.sks */; };
 		5BAFD0631C69328A0088A764 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAFD0621C69328A0088A764 /* GameScene.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B1F919E1C6D386F000B541C /* CGFloat+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extensions.swift"; sourceTree = "<group>"; };
 		5BAFD05B1C69328A0088A764 /* HoppyBunny.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoppyBunny.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BAFD05E1C69328A0088A764 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BAFD0601C69328A0088A764 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 		5BAFD05D1C69328A0088A764 /* HoppyBunny */ = {
 			isa = PBXGroup;
 			children = (
+				5B1F919E1C6D386F000B541C /* CGFloat+Extensions.swift */,
 				5BAFD05E1C69328A0088A764 /* AppDelegate.swift */,
 				5BAFD0601C69328A0088A764 /* GameScene.sks */,
 				5BAFD0A91C6940290088A764 /* Hero.sks */,
@@ -269,6 +272,7 @@
 			files = (
 				5BAFD0631C69328A0088A764 /* GameScene.swift in Sources */,
 				5BAFD0651C69328A0088A764 /* GameViewController.swift in Sources */,
+				5B1F919F1C6D386F000B541C /* CGFloat+Extensions.swift in Sources */,
 				5BAFD05F1C69328A0088A764 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -504,6 +508,7 @@
 				5BAFD0891C69328A0088A764 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5BAFD08A1C69328A0088A764 /* Build configuration list for PBXNativeTarget "HoppyBunnyTests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +517,7 @@
 				5BAFD08C1C69328A0088A764 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5BAFD08D1C69328A0088A764 /* Build configuration list for PBXNativeTarget "HoppyBunnyUITests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +526,7 @@
 				5BAFD08F1C69328A0088A764 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
