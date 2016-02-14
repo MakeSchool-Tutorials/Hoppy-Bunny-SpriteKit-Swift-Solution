@@ -3,7 +3,7 @@
 //  HoppyBunny
 //
 //  Created by Martin Walsh on 08/02/2016.
-//  Copyright (c) 2016 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2016 Make School. All rights reserved.
 //
 
 import UIKit

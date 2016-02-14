@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B14B8D61C70946400314555 /* Obstacle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5B14B8D51C70946400314555 /* Obstacle.sks */; };
 		5B1F919F1C6D386F000B541C /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1F919E1C6D386F000B541C /* CGFloat+Extensions.swift */; };
 		5BAFD05F1C69328A0088A764 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAFD05E1C69328A0088A764 /* AppDelegate.swift */; };
 		5BAFD0611C69328A0088A764 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5BAFD0601C69328A0088A764 /* GameScene.sks */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B14B8D51C70946400314555 /* Obstacle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Obstacle.sks; sourceTree = "<group>"; };
 		5B1F919E1C6D386F000B541C /* CGFloat+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extensions.swift"; sourceTree = "<group>"; };
 		5BAFD05B1C69328A0088A764 /* HoppyBunny.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoppyBunny.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BAFD05E1C69328A0088A764 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				5BAFD05E1C69328A0088A764 /* AppDelegate.swift */,
 				5BAFD0601C69328A0088A764 /* GameScene.sks */,
 				5BAFD0A91C6940290088A764 /* Hero.sks */,
+				5B14B8D51C70946400314555 /* Obstacle.sks */,
 				5BAFD0621C69328A0088A764 /* GameScene.swift */,
 				5BAFD0641C69328A0088A764 /* GameViewController.swift */,
 				5BAFD0661C69328A0088A764 /* Main.storyboard */,
@@ -243,6 +246,7 @@
 			files = (
 				5BAFD0611C69328A0088A764 /* GameScene.sks in Resources */,
 				5BAFD06D1C69328A0088A764 /* LaunchScreen.storyboard in Resources */,
+				5B14B8D61C70946400314555 /* Obstacle.sks in Resources */,
 				5BAFD06A1C69328A0088A764 /* Assets.xcassets in Resources */,
 				5BAFD0AA1C6940290088A764 /* Hero.sks in Resources */,
 				5BAFD0681C69328A0088A764 /* Main.storyboard in Resources */,
