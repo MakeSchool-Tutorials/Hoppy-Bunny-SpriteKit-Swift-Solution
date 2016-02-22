@@ -21,6 +21,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     /* UI Connections */
     var buttonRestart: MSButtonNode!
+    var scoreLabel: SKLabelNode!
     
     /* Timers */
     var sinceTouch: CFTimeInterval = 0
@@ -32,6 +33,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     /* Game management */
     var gameState: GameSceneState = .GameSceneStateActive
+    var points = 0
     
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
@@ -51,6 +53,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         /* Set UI connections */
         buttonRestart = self.childNodeWithName("buttonRestart") as! MSButtonNode
         
+        scoreLabel = self.childNodeWithName("scoreLabel") as! SKLabelNode
+        
         /* Setup restart button selection handler */
         buttonRestart.selectedHandler = {
             
@@ -69,6 +73,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         /* Hide restart button */
         buttonRestart.state = .MSButtonNodeStateHidden
+        
+        /* Reset Score label */
+        scoreLabel.text = String(points)
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -190,6 +197,27 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func didBeginContact(contact: SKPhysicsContact) {
         /* Hero touches anything, game over */
+        
+        /* Get references to bodies involved in collision */
+        let contactA:SKPhysicsBody = contact.bodyA
+        let contactB:SKPhysicsBody = contact.bodyB
+        
+        /* Get references to the physics body parent nodes */
+        let nodeA = contactA.node!
+        let nodeB = contactB.node!
+        
+        /* Did our hero pass through the 'goal'? */
+        if nodeA.name == "goal" || nodeB.name == "goal" {
+            
+            /* Increment points */
+            points += 1
+            
+            /* Update score label */
+            scoreLabel.text = String(points)
+            
+            /* We can return now */
+            return
+        }
         
         /* Ensure only called while game running */
         if gameState != .GameSceneStateActive { return }
