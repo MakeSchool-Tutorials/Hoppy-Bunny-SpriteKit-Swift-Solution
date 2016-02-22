@@ -111,15 +111,12 @@
 		5BAFD05D1C69328A0088A764 /* HoppyBunny */ = {
 			isa = PBXGroup;
 			children = (
-				5B1F919E1C6D386F000B541C /* CGFloat+Extensions.swift */,
-				5BAFD05E1C69328A0088A764 /* AppDelegate.swift */,
-				5BAFD0601C69328A0088A764 /* GameScene.sks */,
-				5BC9437F1C7B5A0200C13C4A /* GameEffects.sks */,
-				5BAFD0A91C6940290088A764 /* Hero.sks */,
-				5B14B8D51C70946400314555 /* Obstacle.sks */,
-				5BAFD0621C69328A0088A764 /* GameScene.swift */,
+				5BF1FE5B1C7B66D0003B9FC9 /* Actions */,
+				5BF1FE581C7B6644003B9FC9 /* Helpers */,
+				5BF1FE591C7B6659003B9FC9 /* Game Scene Objects */,
+				5BF1FE5A1C7B66B1003B9FC9 /* Scenes */,
 				5BAFD0641C69328A0088A764 /* GameViewController.swift */,
-				5BF052C81C7926C100186955 /* MSButtonNode.swift */,
+				5BAFD05E1C69328A0088A764 /* AppDelegate.swift */,
 				5BAFD0661C69328A0088A764 /* Main.storyboard */,
 				5BAFD0691C69328A0088A764 /* Assets.xcassets */,
 				5BAFD06B1C69328A0088A764 /* LaunchScreen.storyboard */,
@@ -144,6 +141,41 @@
 				5BAFD0841C69328A0088A764 /* Info.plist */,
 			);
 			path = HoppyBunnyUITests;
+			sourceTree = "<group>";
+		};
+		5BF1FE581C7B6644003B9FC9 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5B1F919E1C6D386F000B541C /* CGFloat+Extensions.swift */,
+				5BF052C81C7926C100186955 /* MSButtonNode.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		5BF1FE591C7B6659003B9FC9 /* Game Scene Objects */ = {
+			isa = PBXGroup;
+			children = (
+				5BAFD0A91C6940290088A764 /* Hero.sks */,
+				5B14B8D51C70946400314555 /* Obstacle.sks */,
+			);
+			name = "Game Scene Objects";
+			sourceTree = "<group>";
+		};
+		5BF1FE5A1C7B66B1003B9FC9 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				5BAFD0601C69328A0088A764 /* GameScene.sks */,
+				5BAFD0621C69328A0088A764 /* GameScene.swift */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		5BF1FE5B1C7B66D0003B9FC9 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				5BC9437F1C7B5A0200C13C4A /* GameEffects.sks */,
+			);
+			name = Actions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
