@@ -9,7 +9,7 @@
 import SpriteKit
 
 enum GameSceneState {
-    case GameSceneStateActive, GameSceneStateGameOver
+    case Active, GameOver
 }
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
@@ -32,7 +32,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let scrollSpeed: CGFloat = 100
     
     /* Game management */
-    var gameState: GameSceneState = .GameSceneStateActive
+    var gameState: GameSceneState = .Active
     var points = 0
     
     override func didMoveToView(view: SKView) {
@@ -82,7 +82,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         /* Called when a touch begins */
         
         /* Disable touch if game state is not active */
-        if gameState != .GameSceneStateActive { return }
+        if gameState != .Active { return }
         
         /* Reset velocity, helps improve response against cumulative falling velocity */
         hero.physicsBody?.velocity = CGVectorMake(0, 0)
@@ -101,7 +101,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         /* Called before each frame is rendered */
         
         /* Skip game update if game no longer active */
-        if gameState != .GameSceneStateActive { return }
+        if gameState != .Active { return }
         
         /* Grab current velocity */
         let velocityY = hero.physicsBody?.velocity.dy ?? 0
@@ -220,10 +220,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         
         /* Ensure only called while game running */
-        if gameState != .GameSceneStateActive { return }
+        if gameState != .Active { return }
         
         /* Change game state to game over */
-        gameState = .GameSceneStateGameOver
+        gameState = .GameOver
         
         /* Stop any new angular velocity being applied */
         hero.physicsBody?.allowsRotation = false
