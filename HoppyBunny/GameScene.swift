@@ -179,7 +179,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if spawnTimer >= 1.5 {
             
             /* Create a new obstacle reference object using our obstacle resource */
-            let newObstacle = SKReferenceNode.init(fileNamed: "Obstacle") as SKReferenceNode!
+            let resourcePath = NSBundle.mainBundle().pathForResource("Obstacle", ofType: "sks")
+            let newObstacle = SKReferenceNode (URL: NSURL (fileURLWithPath: resourcePath!))
             obstacleLayer.addChild(newObstacle)
             
             /* Generate new obstacle position, start just outside screen and with a random y value */
