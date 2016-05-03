@@ -84,6 +84,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         /* Disable touch if game state is not active */
         if gameState != .Active { return }
         
+        /* Play SFX */
+        let sealSFX = SKAction.playSoundFileNamed("sfx_flap", waitForCompletion: false)
+        self.runAction(sealSFX)
+        
         /* Reset velocity, helps improve response against cumulative falling velocity */
         hero.physicsBody?.velocity = CGVectorMake(0, 0)
         
