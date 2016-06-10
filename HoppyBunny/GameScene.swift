@@ -72,7 +72,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         
         /* Hide restart button */
-        buttonRestart.state = .MSButtonNodeStateHidden
+        buttonRestart.state = .Hidden
         
         /* Reset Score label */
         scoreLabel.text = String(points)
@@ -260,6 +260,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         
         /* Show restart button */
-        buttonRestart.state = .MSButtonNodeStateActive
+        buttonRestart.state = .Active
     }
 }
