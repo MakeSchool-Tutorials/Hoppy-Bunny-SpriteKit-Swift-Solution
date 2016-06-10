@@ -201,6 +201,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     // MARK: - Physics handling
     
     func didBeginContact(contact: SKPhysicsContact) {
+        /* Ensure only called while game running */
+        if gameState != .Active { return }
+        
         /* Hero touches anything, game over */
         
         /* Get references to bodies involved in collision */
@@ -224,9 +227,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             return
         }
         
-        /* Ensure only called while game running */
-        if gameState != .Active { return }
-        
         /* Change game state to game over */
         gameState = .GameOver
         
@@ -244,6 +244,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             /* Put our hero face down in the dirt */
             self.hero.zRotation = CGFloat(-90).degreesToRadians()
+            /* Stop hero from colliding with anything else */
+            self.hero.physicsBody?.collisionBitMask = 0
         })
         
         /* Run action */
