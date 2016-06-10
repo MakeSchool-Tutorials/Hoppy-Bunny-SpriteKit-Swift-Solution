@@ -29,7 +29,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     /* Game constants */
     let fixedDelta: CFTimeInterval = 1.0/60.0 /* 60 FPS */
-    let scrollSpeed: CGFloat = 100
+    let scrollSpeed: CGFloat = 160
     
     /* Game management */
     var gameState: GameSceneState = .Active
@@ -92,7 +92,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         hero.physicsBody?.velocity = CGVectorMake(0, 0)
         
         /* Apply vertical impulse */
-        hero.physicsBody?.applyImpulse(CGVectorMake(0, 300))
+        hero.physicsBody?.applyImpulse(CGVectorMake(0, 250))
         
         /* Apply subtle rotation */
         hero.physicsBody?.applyAngularImpulse(1)
@@ -122,7 +122,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         
         /* Clamp rotation */
-        hero.zRotation.clamp(CGFloat(-90).degreesToRadians(),CGFloat(30).degreesToRadians())
+        hero.zRotation.clamp(CGFloat(-20).degreesToRadians(),CGFloat(30).degreesToRadians())
         hero.physicsBody?.angularVelocity.clamp(-2, 2)
         
         /* Process world scrolling */
