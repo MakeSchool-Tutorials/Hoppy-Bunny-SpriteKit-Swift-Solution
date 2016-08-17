@@ -9,7 +9,7 @@
 import SpriteKit
 
 enum GameSceneState {
-    case Active, GameOver
+    case active, gameOver
 }
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
@@ -32,31 +32,32 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let scrollSpeed: CGFloat = 160
     
     /* Game management */
-    var gameState: GameSceneState = .Active
+    var gameState: GameSceneState = .active
     var points = 0
     
-    override func didMoveToView(view: SKView) {
+    override func didMove(to view: SKView) {
         /* Setup your scene here */
         
         /* Set physics contact delegate */
         physicsWorld.contactDelegate = self
         
         /* Recursive node search for 'hero' (child of referenced node) */
-        hero = self.childNodeWithName("//hero") as! SKSpriteNode
+        hero = self.childNode(withName: "//hero") as! SKSpriteNode
         
         /* Set reference to scroll layer node */
-        scrollLayer = self.childNodeWithName("scrollLayer")
+        scrollLayer = self.childNode(withName: "scrollLayer")
         
         /* Set reference to obstacle layer node */
-        obstacleLayer = self.childNodeWithName("obstacleLayer")
+        obstacleLayer = self.childNode(withName: "obstacleLayer")
         
         /* Set UI connections */
-        buttonRestart = self.childNodeWithName("buttonRestart") as! MSButtonNode
+        buttonRestart = self.childNode(withName: "buttonRestart") as! MSButtonNode
         
-        scoreLabel = self.childNodeWithName("scoreLabel") as! SKLabelNode
+        scoreLabel = self.childNode(withName: "scoreLabel") as! SKLabelNode
         
         /* Setup restart button selection handler */
         buttonRestart.selectedHandler = {
+			[unowned self] in
             
             /* Grab reference to our SpriteKit view */
             let skView = self.view as SKView!
@@ -65,34 +66,34 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let scene = GameScene(fileNamed:"GameScene") as GameScene!
             
             /* Ensure correct aspect mode */
-            scene.scaleMode = .AspectFill
+            scene?.scaleMode = .aspectFill
             
             /* Restart game scene */
-            skView.presentScene(scene)
+            skView?.presentScene(scene)
         }
         
         /* Hide restart button */
-        buttonRestart.state = .Hidden
+        buttonRestart.state = .hidden
         
         /* Reset Score label */
         scoreLabel.text = String(points)
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         /* Called when a touch begins */
         
         /* Disable touch if game state is not active */
-        if gameState != .Active { return }
+        if gameState != .active { return }
         
         /* Play SFX */
         let flapSFX = SKAction.playSoundFileNamed("sfx_flap", waitForCompletion: false)
-        self.runAction(flapSFX)
+		self.run(flapSFX)
         
         /* Reset velocity, helps improve response against cumulative falling velocity */
-        hero.physicsBody?.velocity = CGVectorMake(0, 0)
+        hero.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
         
         /* Apply vertical impulse */
-        hero.physicsBody?.applyImpulse(CGVectorMake(0, 250))
+        hero.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 250))
         
         /* Apply subtle rotation */
         hero.physicsBody?.applyAngularImpulse(1)
@@ -101,11 +102,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         sinceTouch = 0
     }
     
-    override func update(currentTime: CFTimeInterval) {
+    override func update(_ currentTime: TimeInterval) {
         /* Called before each frame is rendered */
         
         /* Skip game update if game no longer active */
-        if gameState != .Active { return }
+        if gameState != .active { return }
         
         /* Grab current velocity */
         let velocityY = hero.physicsBody?.velocity.dy ?? 0
@@ -122,8 +123,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         
         /* Clamp rotation */
-        hero.zRotation.clamp(CGFloat(-20).degreesToRadians(),CGFloat(30).degreesToRadians())
-        hero.physicsBody?.angularVelocity.clamp(-2, 2)
+        hero.zRotation.clamp(CGFloat(30).degreesToRadians(),CGFloat(-20).degreesToRadians())
+        hero.physicsBody?.angularVelocity.clamp(2, -2)
         
         /* Process world scrolling */
         scrollWorld()
@@ -145,16 +146,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         for ground in scrollLayer.children as! [SKSpriteNode] {
             
             /* Get ground node position, convert node position to scene space */
-            let groundPosition = scrollLayer.convertPoint(ground.position, toNode: self)
+            let groundPosition = scrollLayer.convert(ground.position, to: self)
             
             /* Check if ground sprite has left the scene */
             if groundPosition.x <= -ground.size.width / 2 {
                 
                 /* Reposition ground sprite to the second starting position */
-                let newPosition = CGPointMake( (self.size.width / 2) + ground.size.width, groundPosition.y)
+                let newPosition = CGPoint( x: (self.size.width / 2) + ground.size.width, y: groundPosition.y)
                 
                 /* Convert new node position back to scroll layer space */
-                ground.position = self.convertPoint(newPosition, toNode: scrollLayer)
+                ground.position = self.convert(newPosition, to: scrollLayer)
             }
         }
     }
@@ -168,7 +169,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         for obstacle in obstacleLayer.children as! [SKReferenceNode] {
             
             /* Get obstacle node position, convert node position to scene space */
-            let obstaclePosition = obstacleLayer.convertPoint(obstacle.position, toNode: self)
+            let obstaclePosition = obstacleLayer.convert(obstacle.position, to: self)
             
             /* Check if obstacle has left the scene */
             if obstaclePosition.x <= 0 {
@@ -183,15 +184,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if spawnTimer >= 1.5 {
             
             /* Create a new obstacle reference object using our obstacle resource */
-            let resourcePath = NSBundle.mainBundle().pathForResource("Obstacle", ofType: "sks")
-            let newObstacle = SKReferenceNode (URL: NSURL (fileURLWithPath: resourcePath!))
+            let resourcePath = Bundle.main.path(forResource: "Obstacle", ofType: "sks")
+            let newObstacle = SKReferenceNode (url: URL (fileURLWithPath: resourcePath!))
             obstacleLayer.addChild(newObstacle)
             
             /* Generate new obstacle position, start just outside screen and with a random y value */
-            let randomPosition = CGPointMake(352, CGFloat.random(min: 234, max: 382))
+            let randomPosition = CGPoint(x: 352, y: CGFloat.random(min: 234, max: 382))
             
             /* Convert new node position back to obstacle layer space */
-            newObstacle.position = self.convertPoint(randomPosition, toNode: obstacleLayer)
+            newObstacle.position = self.convert(randomPosition, to: obstacleLayer)
             
             // Reset spawn timer
             spawnTimer = 0
@@ -200,9 +201,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     // MARK: - Physics handling
     
-    func didBeginContact(contact: SKPhysicsContact) {
+    func didBegin(_ contact: SKPhysicsContact) {
         /* Ensure only called while game running */
-        if gameState != .Active { return }
+        if gameState != .active { return }
         
         /* Hero touches anything, game over */
         
@@ -228,7 +229,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         
         /* Change game state to game over */
-        gameState = .GameOver
+        gameState = .gameOver
         
         /* Stop any new angular velocity being applied */
         hero.physicsBody?.allowsRotation = false
@@ -240,7 +241,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         hero.removeAllActions()
         
         /* Create our hero death action */
-        let heroDeath = SKAction.runBlock({
+        let heroDeath = SKAction.run({
             
             /* Put our hero face down in the dirt */
             self.hero.zRotation = CGFloat(-90).degreesToRadians()
@@ -249,7 +250,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         })
         
         /* Run action */
-        hero.runAction(heroDeath)
+        hero.run(heroDeath)
         
         /* Load our shake action resource */
         let shakeScene:SKAction = SKAction.init(named: "Shake")!
@@ -258,10 +259,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         for node in self.children {
             
             /* Apply effect each ground node */
-            node.runAction(shakeScene)
+            node.run(shakeScene)
         }
         
         /* Show restart button */
-        buttonRestart.state = .Active
+        buttonRestart.state = .active
     }
 }
