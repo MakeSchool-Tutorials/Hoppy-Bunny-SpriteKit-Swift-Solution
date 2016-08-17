@@ -59,8 +59,8 @@ class MSButtonNode: SKSpriteNode {
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+		state = .active
         selectedHandler()
-        state = .active
     }
     
 }
