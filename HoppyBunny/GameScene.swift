@@ -57,7 +57,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         /* Setup restart button selection handler */
         buttonRestart.selectedHandler = {
-			[unowned self] in
+            [unowned self] in
             
             /* Grab reference to our SpriteKit view */
             let skView = self.view as SKView!
@@ -87,7 +87,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         /* Play SFX */
         let flapSFX = SKAction.playSoundFileNamed("sfx_flap", waitForCompletion: false)
-		self.run(flapSFX)
+        self.run(flapSFX)
         
         /* Reset velocity, helps improve response against cumulative falling velocity */
         hero.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
@@ -123,8 +123,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         
         /* Clamp rotation */
-        hero.zRotation.clamp(CGFloat(30).degreesToRadians(),CGFloat(-20).degreesToRadians())
-        hero.physicsBody?.angularVelocity.clamp(2, -2)
+        hero.zRotation = hero.zRotation.clamped(CGFloat(-20).degreesToRadians(), CGFloat(30).degreesToRadians())
+        hero.physicsBody!.angularVelocity = hero.physicsBody!.angularVelocity.clamped(-2, 2)
         
         /* Process world scrolling */
         scrollWorld()
