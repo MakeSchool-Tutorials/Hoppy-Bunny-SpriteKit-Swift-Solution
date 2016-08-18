@@ -15,7 +15,6 @@ Upon completing this tutorial, you will have learned how to:
 ## Common issues :bug:
 - Incorrect or Conflicting Z Position Values causes objects to disappear
 - 'Optional' or 'Nil Value' errors can often be a result of missing code connections
-- 
 
 ## What you should understand when finished :checkered_flag:
 - Setting up the Scene: Importing Assets, Setting Z-Position, Creating new SKS files, Creating Frame Action Animations
