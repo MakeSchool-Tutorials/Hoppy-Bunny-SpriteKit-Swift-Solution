@@ -1,6 +1,6 @@
 # Hoppy Bunny Tutorial :rabbit:
 
-<!-- screenshots and gifs from licecap (http://www.cockos.com/licecap/), include them in a screenshots folder and reference with relative links -->
+![Gameplay Gif](./Screenshots/GamePlay.gif)
 
 ## What you will learn :white_check_mark:
 Welcome and get excited to build your very first iOS game! The Hoppy Bunny tutorial will teach you how to implement
