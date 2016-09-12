@@ -259,14 +259,16 @@
 				TargetAttributes = {
 					5BAFD05A1C69328A0088A764 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 2NUJ273DRF;
+						LastSwiftMigration = 0800;
 					};
 					5BAFD0721C69328A0088A764 = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0800;
 						TestTargetID = 5BAFD05A1C69328A0088A764;
 					};
 					5BAFD07D1C69328A0088A764 = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0800;
 						TestTargetID = 5BAFD05A1C69328A0088A764;
 					};
 				};
@@ -482,6 +484,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.frostycube.hoppybunny;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -496,6 +499,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.frostycube.hoppybunny;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -508,6 +512,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool.HoppyBunnyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HoppyBunny.app/HoppyBunny";
 			};
 			name = Debug;
@@ -520,6 +525,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool.HoppyBunnyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HoppyBunny.app/HoppyBunny";
 			};
 			name = Release;
@@ -532,6 +538,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool.HoppyBunnyUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = HoppyBunny;
 				USES_XCTRUNNER = YES;
 			};
@@ -544,6 +551,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.makeschool.HoppyBunnyUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = HoppyBunny;
 				USES_XCTRUNNER = YES;
 			};
